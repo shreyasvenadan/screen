@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct onBoarding: View {
+struct onBoardingView: View {
     var body: some View {
         ZStack {
             
@@ -66,6 +66,6 @@ struct onBoarding: View {
 }
 
 #Preview {
-    onBoarding()
+    onBoardingView()
 }
 

@@ -22,7 +22,7 @@ struct CustomTextField: View {
                 .foregroundColor(.secondaryTC)
             
             TextField("", text: $text)
-            
+                .font(.custom("Montserrat", size: 15))
                 .foregroundColor(.primaryTC)
                 .textInputAutocapitalization(.none)
                 .disableAutocorrection(true)

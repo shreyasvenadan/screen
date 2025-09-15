@@ -29,20 +29,43 @@
 		2712A3B72E76891700E2312B /* screenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = screenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		27C8AB6D2E77FFD90054CBA9 /* Exceptions for "screen" folder in "screen" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+				tests/screenTests/screenTests.swift,
+				tests/screenUITests/screenUITests.swift,
+				tests/screenUITests/screenUITestsLaunchTests.swift,
+			);
+			target = 2712A39F2E76891600E2312B /* screen */;
+		};
+		27C8AB782E7801200054CBA9 /* Exceptions for "screen" folder in "screenTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				tests/screenTests/screenTests.swift,
+			);
+			target = 2712A3AC2E76891700E2312B /* screenTests */;
+		};
+		27C8AB792E7801200054CBA9 /* Exceptions for "screen" folder in "screenUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				tests/screenUITests/screenUITests.swift,
+				tests/screenUITests/screenUITestsLaunchTests.swift,
+			);
+			target = 2712A3B62E76891700E2312B /* screenUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		2712A3A22E76891600E2312B /* screen */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				27C8AB6D2E77FFD90054CBA9 /* Exceptions for "screen" folder in "screen" target */,
+				27C8AB782E7801200054CBA9 /* Exceptions for "screen" folder in "screenTests" target */,
+				27C8AB792E7801200054CBA9 /* Exceptions for "screen" folder in "screenUITests" target */,
+			);
 			path = screen;
-			sourceTree = "<group>";
-		};
-		2712A3B02E76891700E2312B /* screenTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = screenTests;
-			sourceTree = "<group>";
-		};
-		2712A3BA2E76891700E2312B /* screenUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = screenUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -76,8 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				2712A3A22E76891600E2312B /* screen */,
-				2712A3B02E76891700E2312B /* screenTests */,
-				2712A3BA2E76891700E2312B /* screenUITests */,
 				2712A3A12E76891600E2312B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -130,9 +151,6 @@
 			dependencies = (
 				2712A3AF2E76891700E2312B /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				2712A3B02E76891700E2312B /* screenTests */,
-			);
 			name = screenTests;
 			packageProductDependencies = (
 			);
@@ -152,9 +170,6 @@
 			);
 			dependencies = (
 				2712A3B92E76891700E2312B /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				2712A3BA2E76891700E2312B /* screenUITests */,
 			);
 			name = screenUITests;
 			packageProductDependencies = (
@@ -397,6 +412,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = screen/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -424,6 +440,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = screen/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
