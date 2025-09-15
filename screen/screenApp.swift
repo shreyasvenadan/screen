@@ -11,11 +11,7 @@ import SwiftUI
 struct screenApp: App {
     var body: some Scene {
         WindowGroup {
-            onBoardingView()
+            RootView()
         }
     }
 }
-
-//#Preview {
-//    screenApp()
-//}

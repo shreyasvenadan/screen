@@ -8,64 +8,77 @@
 import SwiftUI
 
 struct onBoardingView: View {
+    
+    @Binding var currentScreen: CurrentScreen
+
     var body: some View {
         ZStack {
             
-            // Grey Background
+            // grey background
             Color.backgroundC
                 .ignoresSafeArea()
             
-            VStack(spacing: 10) {
+            // assest and text vstack
+            VStack(spacing: 15) {
                 
-                // Tiktok asset
+                // clock-like asset
                 ZStack() {
+                    
+                    // clock asset
                     Image("clock")
                         .resizable()
                         .frame(width: 650, height: 650)
                     
+                    // grey glow ellipse
                     Image("ellipse")
                         .resizable()
                         .frame(width: 700, height: 700)
                 }
                 
-                // SCREEN
-                Text("SCREEN")
-                    .foregroundColor(.primaryTC)
-                    .font(.custom("Montserrat", size: 25))
-                    .fontWeight(.semibold)
-                    .tracking(20)
-                    .multilineTextAlignment(.center)
+                // text vstack
+                VStack(spacing: 10)  {
+                    
+                    // screen title text
+                    Text("SCREEN")
+                        .textStyle(size: 25, weight: .semibold, color: .primaryTC)
+                        .tracking(20)
+                        .multilineTextAlignment(.center)
+                    
+                    // description
+                    Text("maybe if you weren't so addicted, you wouldn't need this app")
+                        .textStyle(size: 15, weight: .medium, color: .secondaryTC)
+                        .multilineTextAlignment(.center)
+                        .lineLimit(nil)
+                        .frame(maxWidth: 280)
+                        .fixedSize(horizontal: false, vertical: true)
+                    
+                }
                 
-                //
-                Text("maybe if you weren't so addicted, you wouldn't need this app")
-                    .foregroundColor(.secondaryTC)
-                    .font(.custom("Montserrat", size: 15))
-                    .fontWeight(.semibold)
-                    .multilineTextAlignment(.center)
-                    .lineLimit(nil)
-                    .frame(maxWidth: 280)
-                    .fixedSize(horizontal: false, vertical: true)
-                
-                
-                Spacer()
                 Spacer()
 
+                // get started button
+                Button("GET STARTED")   {
+                    currentScreen = .signup
+                }
+                .textStyle(size: 15, weight: .semibold, color: .primaryTC)
+                .tracking(5)
+                .multilineTextAlignment(.center)
                 
-                Text("GET STARTED")
-                    .foregroundColor(.primaryTC)
-                    .font(.custom("Montserrat", size: 15))
-                    .fontWeight(.medium)
-                    .tracking(5)
-                    .multilineTextAlignment(.center)
+//                Text("GET STARTED")
+//                    .textStyle(size: 15, weight: .semibold, color: .primaryTC)
+//                    .tracking(5)
+//                    .multilineTextAlignment(.center)
 
             }
             .padding()
+            
+            // offset so the clock-like asset can go up
             .offset(y: -70)
         }
     }
 }
 
 #Preview {
-    onBoardingView()
+    onBoardingView(currentScreen: .constant(.onboarding))
 }
 

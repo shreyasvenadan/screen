@@ -9,7 +9,7 @@
 import SwiftUI
 
 
-struct CustomTextField: View {
+struct customTextField: View {
     
         var placeholder: String
         @Binding var text: String
@@ -17,19 +17,18 @@ struct CustomTextField: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 4){
+            
             Text(placeholder)
-                .font(.custom("Montserrat", size: 15))
-                .foregroundColor(.secondaryTC)
+                .textStyle(size: 15, weight: .regular, color: .secondaryTC)
             
             TextField("", text: $text)
-                .font(.custom("Montserrat", size: 15))
-                .foregroundColor(.primaryTC)
+                .textStyle(size: 15, weight: .medium, color: .primaryTC)
                 .textInputAutocapitalization(.none)
                 .disableAutocorrection(true)
             
             Rectangle()
                 .frame(height: 1)
-                .foregroundColor(.white.opacity(0.7))
+                .foregroundColor(.primaryTC.opacity(0.7))
             
         }
 
@@ -41,7 +40,7 @@ struct CustomTextField: View {
 #Preview{
     ZStack {
         Color.black.ignoresSafeArea()
-        CustomTextField(placeholder: "username", text: .constant("shreyasvenadan"))
+        customTextField(placeholder: "username", text: .constant("shreyasvenadan"))
             .padding()
     }
 
