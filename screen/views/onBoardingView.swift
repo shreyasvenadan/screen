@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  onBoarding.swift
 //  screen
 //
 //  Created by Shreyas Venadan on 14/9/2025.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct onBoarding: View {
     var body: some View {
         ZStack {
             
@@ -66,6 +66,6 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    onBoarding()
 }
 
