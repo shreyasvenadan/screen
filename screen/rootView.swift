@@ -1,5 +1,5 @@
 //
-//  RootView.swift
+//  rootView.swift
 //  screen
 //
 //  Created by Shreyas Venadan on 15/9/2025.
@@ -12,7 +12,7 @@ enum CurrentScreen {
     case signup
     case login
 }
-struct RootView: View {
+struct rootView: View {
     
     @State var currentScreen: CurrentScreen = .onboarding
 
@@ -22,7 +22,7 @@ struct RootView: View {
             switch currentScreen{
             
             case .signup:
-                signupView()
+                signupView(currentScreen: $currentScreen)
                 
             case .login:
                 loginView()

@@ -64,10 +64,6 @@ struct onBoardingView: View {
                 .tracking(5)
                 .multilineTextAlignment(.center)
                 
-//                Text("GET STARTED")
-//                    .textStyle(size: 15, weight: .semibold, color: .primaryTC)
-//                    .tracking(5)
-//                    .multilineTextAlignment(.center)
 
             }
             .padding()

@@ -12,8 +12,8 @@ struct signupView: View {
     @State private var username = ""
     @State private var password = ""
     
-    var currentScreen = RootView().$currentScreen
-    
+    @Binding var currentScreen: CurrentScreen
+
     var body: some View {
         
         NavigationStack {
@@ -54,11 +54,12 @@ struct signupView: View {
                                 .textStyle(size: 15, weight: .regular, color: .secondaryTC)
                             
                             
-                        
-                            
-                            Text("Login")
-                                .textStyle(size: 15, weight: .medium, color: .primaryTC )
-                                .underline(true)
+                            // login button
+                            Button("Login")   {
+                                currentScreen = .login
+                            }
+                            .textStyle(size: 15, weight: .medium, color: .primaryTC)
+                            .underline(true)
                             
                             
                             
@@ -68,10 +69,14 @@ struct signupView: View {
                     }
                     
                     // login confirm button
-                    Text("SIGN UP")
-                        .textStyle(size: 15, weight: .semibold, color: .primaryTC)
-                        .tracking(5)
-                        .multilineTextAlignment(.center)
+                    Button("SIGN UP")   {
+                        currentScreen = .login
+                    }
+                    .textStyle(size: 15, weight: .semibold, color: .primaryTC)
+                    .tracking(5)
+                    .multilineTextAlignment(.center)
+                
+
                     
                     
                     
@@ -87,5 +92,5 @@ struct signupView: View {
 }
 
 #Preview {
-    signupView()
+    signupView(currentScreen: .constant(.signup))
 }
