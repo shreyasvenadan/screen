@@ -21,10 +21,22 @@ struct customTextField: View {
             Text(placeholder)
                 .textStyle(size: 15, weight: .regular, color: .secondaryTC)
             
-            TextField("", text: $text)
-                .textStyle(size: 15, weight: .medium, color: .primaryTC)
-                .textInputAutocapitalization(.none)
-                .disableAutocorrection(true)
+            
+            if placeholder == "password" {
+                
+                SecureField("", text: $text)
+                    .textStyle(size: 15, weight: .medium, color: .primaryTC)
+                    .textInputAutocapitalization(.none)
+                    .disableAutocorrection(true)
+                
+            }
+            else {
+                
+                TextField("", text: $text)
+                    .textStyle(size: 15, weight: .medium, color: .primaryTC)
+                    .textInputAutocapitalization(.none)
+                    .disableAutocorrection(true)
+            }
             
             Rectangle()
                 .frame(height: 1)
@@ -33,6 +45,10 @@ struct customTextField: View {
         }
 
     }
+    
+    
+
+    
 }
 
 

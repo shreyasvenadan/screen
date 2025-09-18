@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Lottie
 
 struct onBoardingView: View {
     
@@ -25,8 +26,9 @@ struct onBoardingView: View {
                 ZStack() {
                     
                     // clock asset
-                    Image("clock")
-                        .resizable()
+                    LottieView(animation: .named("clock"))
+                        .playing(loopMode: .loop)
+                        .animationSpeed(0.25)
                         .frame(width: 650, height: 650)
                     
                     // grey glow ellipse
@@ -57,12 +59,15 @@ struct onBoardingView: View {
                 Spacer()
 
                 // get started button
-                Button("GET STARTED")   {
-                    currentScreen = .signup
+                Button(action:  {
+                    currentScreen = .login
+                })  {
+                    Text("GET STARTED")
+                        .textStyle(size: 15, weight: .semibold, color: .primaryTC)
+                        .tracking(5)
+                        .multilineTextAlignment(.center)
                 }
-                .textStyle(size: 15, weight: .semibold, color: .primaryTC)
-                .tracking(5)
-                .multilineTextAlignment(.center)
+                
                 
 
             }

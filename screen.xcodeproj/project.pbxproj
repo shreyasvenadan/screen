@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		277B625B2E7A901200822456 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 277B625A2E7A901200822456 /* Auth */; };
+		277B625D2E7A901200822456 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 277B625C2E7A901200822456 /* Supabase */; };
+		278A46262E7C41C800FB9F4C /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 278A46252E7C41C800FB9F4C /* Lottie */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		2712A3AE2E76891700E2312B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -75,6 +81,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				277B625D2E7A901200822456 /* Supabase in Frameworks */,
+				277B625B2E7A901200822456 /* Auth in Frameworks */,
+				278A46262E7C41C800FB9F4C /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +142,9 @@
 			);
 			name = screen;
 			packageProductDependencies = (
+				277B625A2E7A901200822456 /* Auth */,
+				277B625C2E7A901200822456 /* Supabase */,
+				278A46252E7C41C800FB9F4C /* Lottie */,
 			);
 			productName = screen;
 			productReference = 2712A3A02E76891600E2312B /* screen.app */;
@@ -210,6 +222,10 @@
 			);
 			mainGroup = 2712A3972E76891600E2312B;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				277B62592E7A901200822456 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+				278A46242E7C41C800FB9F4C /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 2712A3A12E76891600E2312B /* Products */;
 			projectDirPath = "";
@@ -410,6 +426,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9Z6SPG3QRW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = screen/Info.plist;
@@ -438,6 +455,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9Z6SPG3QRW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = screen/Info.plist;
@@ -567,6 +585,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		277B62592E7A901200822456 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase-community/supabase-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+		278A46242E7C41C800FB9F4C /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		277B625A2E7A901200822456 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 277B62592E7A901200822456 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		277B625C2E7A901200822456 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 277B62592E7A901200822456 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+		278A46252E7C41C800FB9F4C /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 278A46242E7C41C800FB9F4C /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2712A3982E76891600E2312B /* Project object */;
 }

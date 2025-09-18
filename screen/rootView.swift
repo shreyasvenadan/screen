@@ -11,6 +11,7 @@ enum CurrentScreen {
     case onboarding
     case signup
     case login
+    case profile
 }
 struct rootView: View {
     
@@ -25,10 +26,13 @@ struct rootView: View {
                 signupView(currentScreen: $currentScreen)
                 
             case .login:
-                loginView()
+                loginView(currentScreen: $currentScreen)
                 
             case .onboarding:
                 onBoardingView(currentScreen: $currentScreen)
+                
+            case .profile:
+                profileView(currentScreen: $currentScreen)
                 
             }
         }
